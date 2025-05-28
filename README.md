@@ -67,7 +67,7 @@ Having the modulator and tuning into the channel does provide a more true to ori
 
 Alternatively the composite output cinch bus footprint is included so this also can be soldered in place of the modulator, though it remains highly recommended to try a modulator for the experience.
 
-Otherwise, the CPLD ULA offers some simple but cool features such as complete reprogramming of all the ZX81 circuits, bank switching and/or shadow RAM access to the entire 128KB of the SRAM would be possible, and with a little effort the spare CPLD pins can be wired to some custom device of choice of the builder. With some creative ideas the CPLD could produce sounds and/or interface to a joystick, etc.   
+Otherwise, the CPLD ULA offers some simple but interesting features such as complete reprogramming of all the ZX81 circuits, bank switching and/or shadow RAM access to the entire 128KB of the SRAM would be possible, and with a little effort the spare CPLD pins can be wired to some custom device of choice of the builder. With some creative ideas the CPLD could produce sounds and/or interface to a joystick, etc.   
 
 On the EAR and MIC connectors there is the middle pin available to route sound to a speaker when this unused pin is wired to some simple sound or noise circuit inside the ZX81.  
 
