@@ -55,7 +55,7 @@ The PCB contains the CPLD, Z80A CPU, 27C64 EPROM, 681000 SRAM and a 74HC04 for g
 
 The JTAG pins are on the bottom PCB edge, so it will be easy to open the ZX81 case, plug in a programming cable and reprogram the CPLD without needing to unscrew the PCB from the top shell, which spares the membrane keyboard from being unplugged and plugged back in too many times.
 
-There is no linear regulator on the PCB, instead a modern 5V DC power supply can be used used resulting in less heat inside the ZX81 case.
+There is no linear regulator on the PCB, instead a modern 5V DC power supply can be used resulting in less heat inside the ZX81 case.
 
 Why this PCB? For people who like the look and style of the original Issue 3 PCB, however want to repair a faulty ULA but at the same time don't want to plug in or wire an adapter PCB, and rather would prefer a more tidy new single PCB design, and yet want to maintain the look and feel of an original Issue 3 PCB as much as possible and reasonable.
 
