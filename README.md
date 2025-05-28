@@ -1,5 +1,7 @@
 # ZX81_ISSUE_3
-ZX81 Computer Replacement concept and PCB design in the same style as the Sinclair ZX81 ISSUE 3.
+ZX81 Computer Replacement concept and PCB design in the same style as the Sinclair ZX81 ISSUE 3 however using a CPLD to replace the original ULA, for example if your ULA is defective.
+
+![A picture of the ZX81 Issue 3 replacement PCB](ZX81_ISSUE_3_CPLD_PCB_REV1_CMP.png)
 
 ## Purpose and permitted use, cautions for a potential builder of this design
 This project was created for historical purposes out of love for historical computing designs and for the purpose of enabling computing enthousiasts with a sufficient level of building and troubleshooting expertise to be able to experience the technology by building and troubleshooting the hardware described in this project.
