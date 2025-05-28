@@ -71,7 +71,7 @@ Otherwise, the CPLD ULA offers some simple but interesting features such as comp
 
 On the EAR and MIC connectors there is the middle pin available to route sound to a speaker when this unused pin is wired to some simple sound or noise circuit inside the ZX81.  
 
-The 74HC04 has 4 spare gates which have purposely not been routed to anything which normally we wouldn't do but that way the user could make use of those 4 gates for any purpose such as driving LEDs or creating some output signals while protecting the CPLD, etc. and not need to cut any connections to be able to do this.
+The 74HC04 has 4 spare gates which have purposely not been routed to anything which normally we wouldn't do but that way the user could make use of those 4 gates for any purpose such as driving LEDs or creating some output signals while protecting the CPLD, etc. and it would not be necessary to cut any connections to be able to use these inverters.
 
 Having a CPLD inside a ZX81 offers a lot of opportunities for further experimentation with the ZX81 display system. Other timing schemes could be created for the pixel display. Also we could use a different crystal to get a different pixel clock frequency, and design some custom hsync timer etc. inside the CPLD. Using a 20MHz Z80 and a really fast EEPROM, or creating an INIT routine for making a ROM shadow copy providing faster memory speeds, this may enable much faster pixel speeds. The clock speed could be dynamically controlled by adding an extra clock signal to a spare pin.
 
