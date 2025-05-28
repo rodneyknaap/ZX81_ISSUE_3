@@ -1,5 +1,5 @@
 # ZX81_ISSUE_3
-ZX81 Replacement PCB in style of ISSUE 3
+ZX81 Computer Replacement concept and PCB design in the same style as the Sinclair ZX81 ISSUE 3.
 
 ## Purpose and permitted use, cautions for a potential builder of this design
 This project was created for historical purposes out of love for historical computing designs and for the purpose of enabling computing enthousiasts with a sufficient level of building and troubleshooting expertise to be able to experience the technology by building and troubleshooting the hardware described in this project.
