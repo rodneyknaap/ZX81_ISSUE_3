@@ -21,6 +21,8 @@ When connecting this system to a computer network which contains stored informat
 
 When building this project, the builder assumes personal responsibility for troubleshooting it and using the necessary care and expertise to make it function properly as defined by the design. You can email me with questions, but I will reply only if I have time and if I find the question to be valid. Which will probably also lead to an update here. I want to primarily dedicate my time to new project development, I am not able to do any user support, so that's why I provide the elaborate info here which will be expanded if needed.
 
+---------------------------------------------
+
 # Acknowledgements
 
 This project was inspired by:
@@ -29,6 +31,8 @@ This project was inspired by:
 - the German ZX-Team who inspired me a lot by sending me their Magazin and kind letters and messages. Particularly Peter Liebert Adelt and Kai Fischer with whom I have had very pleasant and memorable contact in the 1990s years.
 - Gary Kildall who invented CP/M, the concept of splitting the BIOS from software operation and so much more
 - Wayne Warthen who created and manages the ROMWBW CP/M project development which is part of the basis of this project
+
+---------------------------------------------
 
 # Outline of the project
 This project has been created in order to repair a defective ZX81 where the original ULA has gone defective, or where the user wants to improve the existing computer with a more modern quality design and solution, where:
@@ -80,14 +84,20 @@ Manufacturing this cost effective PCB would increase the ZX81 PCB quality a lot,
 Creating some I/O port inside the CPLD and allowing this to do bank switching of the 8 16KB SRAM banks, and offering shadow copy features to load custom programs instead of the original ROM are also features which could be created to make a lot of new ideas possible in dynamic memory configuration. For example loading an alternative ROM image from a tape file and enabling it in SRAM. 
 The A6 to /INT connection is now configurable inside the CPLD and could be made dependent on some I/O bit value which allows it to be turned on or off, for example for running software routines which are not compatible with this mechanism. An external interface could drive INT on the CPU instead of A6 in order to be able to use interrupts for other purposes.
 
+---------------------------------------------
+
 # Status of the project
 The PCB design and initial CPLD project are finished.  
 
 ![Front picture of the PCB](ZX81_ISSUE_3_CPLD_PCB_REV1_1.png)  
 
+---------------------------------------------
+
 ![Back picture of the PCB](ZX81_ISSUE_3_CPLD_PCB_REV1_BACK_1.png)  
 
-PCBs will be ordered from the factory shortly and I will build/test the prototype and update this page.
+---------------------------------------------
+
+PCBs will be ordered from the factory shortly in a combined order for several projects and I will build/test the prototype and this page will be updated further.
 
 Kind regards,
 
