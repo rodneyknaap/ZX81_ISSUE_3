@@ -97,7 +97,10 @@ The PCB design and initial CPLD project are finished.
 
 ---------------------------------------------
 
-PCBs will be ordered from the factory shortly in a combined order for several projects and I will build/test the prototype and this page will be updated further.
+PCBs will be ordered from the factory shortly in a combined order for several projects.  
+I will build/test the prototype and this page will be updated further.
+The CPLD project is only an initial version, possibly more functions will be added or modified.
+If so, I will share the update CPLD project here.
 
 Kind regards,
 
