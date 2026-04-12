@@ -127,6 +127,26 @@ Status: PCB has been received and will be built and tested.
 The CPLD project zip file in the directory is only an initial version, possibly more functions will be added or modified.
 If so, I will share the updated CPLD project here.
 
+# Building advice  
+Soldering this board should start by soldering the CPLD first.  
+So the first step is adding no clean flux on the SMD pads.  
+After that solder can be loaded onto the pads using a bigger wedge shaped solder tip.  
+Wiping along the length of the pads, adding sufficient solder, all pads can be loaded with solder as much as they will take to make sure that when soldering the PLCC J lead chip onto the pads, the pads will quickly take more solder and attach with each pin of the PLCC IC.  
+Position the IC very carefully to make sure it's really straight, make sure pin 1 is aligned, and then add some solder onto a smaller soldering tip, and apply some solder to the corner pins, fixing the PLCC in the correct place. After doing opposing corners and adjusting again to make sure it's absolutely straight, take your time, then you can solder all the pins with strong light and magnification making sure you have a really good view on the work.   
+After doing this, first use a strong magnification and light to visually inspect all the pins. After that you can beep out all adjacent pins to make sure there are no shorts. If there is a connection, use braid solder wick and no clean flux to remove the short, and solder again after applying some new flux.
+
+After soldering the CPLD, all the other components can be soldered in. Check the text above which of the optional components you will want to add.
+
+The CPLD has various pins available to solder pads on the board, most of which can be reached from the bottom, make sure not to insert any wires to far, only barely solder them into the holes so they don't touch anything they shouldn't. I suggest if you are sure that the ICs are fine, you can solder them directly into the board. This will make the computer really solid and reliable. The ROM would be left removable using a socket.
+
+If you want to add any expansions, you could consider soldering a boxheader to the edge pads so you can use a flatcable to avoid loose contacts.
+
+/ROMCS and /RAMCS use separation resistors and are connected to the expansion connector so the control can be overridden by expansions by holding them high or selectively driving them in some way.
+
+It's an interesting idea to make some kind of bank switching RAM system. We have 128KB of SRAM in the computer which has 3 address inputs which can be manipulated using logic. So we can potentially move around 8 pages of 16KB RAM by changing the output address lines from the inputs by the Z80. This could potentially be used for animation, alternate screen data and other purposes like loading very large programs.  
+I may look into swapping some areas around in some way in order to add different ROM code. For example, CP/M code could possibly be loaded into the low memory area and calling the reset start address from outside of the area after swapping the CP/M code into place. However without display and keyboard drivers or a serial console you cannot operate CP/M.  
+A possible simple method for exchanging the Z80 memory contents would be to invert the A15 output, initialize the computer, then load everything in place in the top half of RAM, then inverting the A15 and disabling the ROM. This could load alternate software into the system and a next step can be to overwrite the second half of RAM as well. Of course, some form of keyboard and display control would make sense in the new "ROM" code so the computer will keep a console going with the user.
+
 Kind regards,
 
 Rodney
