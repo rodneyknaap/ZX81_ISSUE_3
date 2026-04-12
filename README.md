@@ -40,28 +40,29 @@ This project has been created in order to repair a defective ZX81 where the orig
 - we want to keep the UM1233 modulator in the computer in order to preserve certain nostalgic aspects and effects such as noise when tuning into the TV channel
 
 Advantages of this design:  
-- more modern CPLD is used instead of ULA
-- manufacturing a new PCB provides a much better quality PCB and could be done with ENIG gold plating on expansion connector
-- the computer is to a large degree reconfigurable by reprogramming the ULA
-- we can use some form of bank switching to increase the RAM size to 128KB
+- more modern CPLD is used instead of ULA, more durable and reliable
+- manufacturing a new PCB provides a much better modern quality PCB and could be done with ENIG gold plating on expansion connector
+- the computer is to a very large degree reconfigurable by reprogramming the ULA which invites experimentation!
+- we can use some form of bank switching to increase the RAM size to 128KB because the high address lines to the SRAM are outputs of the CPLD so we can reprogram the functions to do bank switching for example based on IO writes to a certain IO port address banks in certain areas can be swapped to be able to flip data very fast
 - we can create a shadow copy mechanism to feature the ROM code in RAM and thus featuring the entire Z80 memory space in RAM
 - we would be able to load new ROM code from a tape program, move it in a RAM segment and switch it in place of the ROM area
 - CHR$128 UDG is supported
-- transistor stages for reliable and convenient line level 2V tape loading using a phone or PC headphone output
+- transistor stages for reliable and convenient line level 2V tape loading using a phone or PC headphone output etc
 - transistor amplifier with potmeter level adjustment for the video signal going into the modulator
 - free CPLD pins available on solder pads for creating custom circuits using the CPLD for example a joystick, sound output etc
 - the memory map is completely reprogrammable
 - using the CPLD we can include register bits for enabling operating modes and switching options in software
+- some spare inverters are available on the HC04 TTL IC for any purpose
 
 The PCB is designed much in the same style of the Issue 3 ZX81 PCB. Which means it has all resistors in horizontal orientation, with the same lead length of resistors and diodes.  
 
 The PCB contains the CPLD, Z80A CPU, 27C64 EPROM, 681000 SRAM and a 74HC04 for generating the clock signal.  
 
-The JTAG pins are on the bottom PCB edge, so it will be easy to open the ZX81 case, plug in a programming cable and reprogram the CPLD without needing to unscrew the PCB from the top shell, which spares the membrane keyboard from being unplugged and plugged back in too many times.
+The JTAG pins are on the bottom PCB edge, so it will be easy to open the ZX81 case, plug in a programming cable and reprogram the CPLD without needing to unscrew the PCB from the top shell, which spares the membrane keyboard from being unplugged and plugged back in too many times. Theoretically some pin bus strip can be soldered into the back of the PCB to plug the JTAG cable without removing the PCB.
 
 There is no linear regulator on the PCB, instead a modern 5V DC power supply can be used resulting in less heat inside the ZX81 case.
 
-Why this PCB? For people who like the look and style of the original Issue 3 PCB, however want to repair a faulty ULA but at the same time don't want to plug in or wire an adapter PCB, and rather would prefer a more tidy new single PCB design, and yet want to maintain the look and feel of an original Issue 3 PCB as much as possible and reasonable.
+Why this PCB? For people who like the look and style of the original Issue 3 PCB, however want to repair a faulty ULA but at the same time don't want to plug in or wire an adapter PCB, and rather would prefer a more tidy new single PCB design, and yet want to maintain the look and feel of an original Issue 3 PCB as much as possible and reasonable. Some components like CPU, resistors etc can be transferred to the new PCB.
 
 The 27C64 EPROM was chosen because the D2364 has a pinout somewhat different from a 27C64, which would make replacing the ROM more difficult.
 
@@ -69,11 +70,13 @@ The PCB contains a modulator footprint as well. Why a modulator? Because having 
 
 Having the modulator and tuning into the channel does provide a more true to original experience. A transistor video output stage and potmeter are included for adjusting output video voltage level, because this may benefit the modulation quality by being able to adjust the signal ideally for the input of the modulator.
 
-Alternatively the composite output cinch bus footprint is included so this also can be soldered in place of the modulator, though it remains highly recommended to try a modulator for the experience.
+Alternatively the composite output cinch bus footprint is included so this also can be soldered in place of the modulator, though it remains highly recommended to try a modulator for the experience if a period TV is available as a monitor.
+
+NB I also found that connecting the video output to a speaker somehow can produce the typical sound heard from tuning into the ZX81 modulator RF channel so that would also be one way to have this experience.
 
 Otherwise, the CPLD ULA offers some simple but interesting features such as complete reprogramming of all the ZX81 circuits, bank switching and/or shadow RAM access to the entire 128KB of the SRAM would be possible, and with a little effort the spare CPLD pins can be wired to some custom device of choice of the builder. With some creative ideas the CPLD could produce sounds and/or interface to a joystick, etc.   
 
-On the EAR and MIC connectors there is the middle pin available to route sound to a speaker when this unused pin is wired to some simple sound or noise circuit inside the ZX81.  
+On the EAR and MIC connectors there is the middle pin available to route sound to a speaker when this unused pin is wired to some simple sound or noise circuit inside the ZX81. Or a small speaker could be built into the case for experimenting with beep tones etc using the CPLD.
 
 The 74HC04 has 4 spare gates which have purposely not been routed to anything which normally we wouldn't do but that way the user could make use of those 4 gates for any purpose such as driving LEDs or creating some output signals while protecting the CPLD, etc. and it would not be necessary to cut any connections to be able to use these inverters.
 
@@ -97,10 +100,32 @@ The PCB design and initial CPLD project are finished.
 
 ---------------------------------------------
 
-PCBs will be ordered from the factory shortly in a combined order for several projects.  
-I will build/test the prototype and this page will be updated further.
-The CPLD project is only an initial version, possibly more functions will be added or modified.
-If so, I will share the update CPLD project here.
+Explanation of optional components for different functions:  
+
+C11	47nF
+R27	1k
+optional tape input filter, don't populate and first test tape loading
+if tapes load fine, don't populate this filter  
+
+D9	1N4148
+R31	390 ohm
+R32	560 ohm
+optional for USA TV output using RF modulator  
+
+J12
+short when using cinch video output instead of a modulator  
+
+R30	4k7
+populate for NTSC standard video output  
+
+R56	10k
+populate for PAL standard video output  
+
+
+PCB has been received and will be built and tested.  
+
+The CPLD project zip file in the directory is only an initial version, possibly more functions will be added or modified.
+If so, I will share the updated CPLD project here.
 
 Kind regards,
 
