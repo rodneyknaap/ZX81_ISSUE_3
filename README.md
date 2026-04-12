@@ -102,27 +102,27 @@ The PCB design and initial CPLD project are finished.
 
 Explanation of optional components for different functions:  
 
-C11	47nF
-R27	1k
+C11	47nF  
+R27	1k  
 optional tape input filter, don't populate and first test tape loading
 if tapes load fine, don't populate this filter  
 
-D9	1N4148
-R31	390 ohm
-R32	560 ohm
+D9	1N4148  
+R31	390 ohm  
+R32	560 ohm  
 optional for USA TV output using RF modulator  
 
-J12
+J12  
 short when using cinch video output instead of a modulator  
 
-R30	4k7
+R30	4k7  
 populate for NTSC standard video output  
 
-R56	10k
+R56	10k  
 populate for PAL standard video output  
+  
 
-
-PCB has been received and will be built and tested.  
+Status: PCB has been received and will be built and tested.  
 
 The CPLD project zip file in the directory is only an initial version, possibly more functions will be added or modified.
 If so, I will share the updated CPLD project here.
