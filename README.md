@@ -104,7 +104,7 @@ Explanation of optional components for different functions:
 
 C11	47nF  
 R27	1k  
-optional tape input filter, don't populate and first test tape loading
+optional tape input filter, don't populate and first test tape loading  
 if tapes load fine, don't populate this filter  
 
 D9	1N4148  
