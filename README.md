@@ -147,6 +147,22 @@ It's an interesting idea to make some kind of bank switching RAM system. We have
 I may look into swapping some areas around in some way in order to add different ROM code. For example, CP/M code could possibly be loaded into the low memory area and calling the reset start address from outside of the area after swapping the CP/M code into place. However without display and keyboard drivers or a serial console you cannot operate CP/M.  
 A possible simple method for exchanging the Z80 memory contents would be to invert the A15 output, initialize the computer, then load everything in place in the top half of RAM, then inverting the A15 and disabling the ROM. This could load alternate software into the system and a next step can be to overwrite the second half of RAM as well. Of course, some form of keyboard and display control would make sense in the new "ROM" code so the computer will keep a console going with the user.
 
+# Update regarding the project blog  
+From july 2026 I will only update my project blog on my own website and I will update the readme info on GitHub for the projects.  
+
+So anyone who is interested is hereby invited to take a look at my website.
+I created a forum system there and if you like to join, feel free to send me an email and I will create a login for you so you can post subjects and reply to threads. 
+
+You can find my website in the repository link URL or via https://www.knaapic.nl  
+The menu "Historic computing" contains dedicated pages for the repository projects.
+A lot of information is the same as here but some details have been elaborated on my website.
+The forum link is: 
+https://knaapic.nl/community/   
+
+Thank you for your interest, I look forward to hearing from you!
+
 Kind regards,
 
 Rodney
+
+Updated last on july 11th, 2026.
