@@ -132,7 +132,8 @@ The CPLD project zip file in the directory is only an initial version, possibly 
 If so, I will share the updated CPLD project here.
 
 # Building advice  
-Soldering this board should start by soldering the CPLD first.  
+![Soldering the CPLD first is recommended.](SOLDERING_CPLD_FIRST.jpg)  
+Soldering this board should start by soldering the CPLD first because otherwise access to the pins of the CPLD would be obstructed by surrounding components later.
 So the first step is adding no clean flux on the SMD pads.  
 After that solder can be loaded onto the pads using a bigger wedge shaped solder tip.  
 Wiping along the length of the pads, adding sufficient solder, all pads can be loaded with solder as much as they will take to make sure that when soldering the PLCC J lead chip onto the pads, the pads will quickly take more solder and attach with each pin of the PLCC IC.  
@@ -150,6 +151,7 @@ If you want to add any expansions, you could consider soldering a boxheader to t
 It's an interesting idea to make some kind of bank switching RAM system. We have 128KB of SRAM in the computer which has 3 address inputs which can be manipulated using logic. So we can potentially move around 8 pages of 16KB RAM by changing the output address lines from the inputs by the Z80. This could potentially be used for animation, alternate screen data and other purposes like loading very large programs.  
 I may look into swapping some areas around in some way in order to add different ROM code. For example, CP/M code could possibly be loaded into the low memory area and calling the reset start address from outside of the area after swapping the CP/M code into place. However without display and keyboard drivers or a serial console you cannot operate CP/M.  
 A possible simple method for exchanging the Z80 memory contents would be to invert the A15 output, initialize the computer, then load everything in place in the top half of RAM, then inverting the A15 and disabling the ROM. This could load alternate software into the system and a next step can be to overwrite the second half of RAM as well. Of course, some form of keyboard and display control would make sense in the new "ROM" code so the computer will keep a console going with the user.
+For programming the CPLD, it's recommended to solder an angled header to connect the JTAG programmer. I have since replaced the JTAG header seen in the photo above with an angled one as well.  
 
 # Status update about this issue 3 project  
 I have built up the PCB and verified it to be fully functional as intended.  
